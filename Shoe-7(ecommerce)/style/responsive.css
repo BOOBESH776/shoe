@@ -1,0 +1,277 @@
+/* hero-container-start */
+
+@media screen and (max-width:480px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero-container .indro-words {
+        font-size: 15px;
+    }
+
+    .hero-container .row .mt-4 .buy-btn .btn {
+        width: 160px;
+    }
+
+    .hero-img img {
+        width: 82vw;
+        height: 55vh;
+        position: relative;
+        top: 2px;
+    }
+
+
+    .vertical-text {
+        position: relative;
+        top: 130px;
+        border-radius: 3px;
+        writing-mode: vertical-rl;
+        transform: rotate(240deg);
+        font-weight: 500;
+    }
+}
+
+
+/* hero-container-end */
+
+/* artical-img-start */
+@media screen and (max-width:480px) {
+
+    .artical-container .artical-img-1 img {
+
+        width: 70vw;
+        height: 60vh;
+
+    }
+
+    .artical-container .artical .artical-img-1 .d-flex {
+        justify-content: center;
+        position: relative;
+        top: 390px;
+    }
+
+    .artical-img-p {
+        width: 370px;
+    }
+
+    .artical-img-p-1 {
+        width: 370px;
+    }
+
+    .artical-img-2 .d-flex {
+        justify-content: center;
+        position: relative;
+        top: 430px;
+    }
+
+    .artical-img-2 img {
+        width: 90vw;
+        height: 70vh;
+        position: relative;
+        right: 30px;
+    }
+}
+
+/* artical-img-end */
+
+
+/* our product */
+
+@media screen and (max-width:480px) {
+    .product-vertical-text {
+        position: relative;
+    }
+
+    .our-products-container .product-text {
+        transform: rotate(90deg);
+        text-align: center;
+        position: relative;
+        top: 10px;
+    }
+
+    .our-products-container .product-box {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .products-img-container {
+        gap: 50px;
+    }
+
+    .product-sm-device {
+        position: relative;
+
+
+    }
+
+}
+
+/* our product-end */
+
+/* sweatwear-content */
+
+@media screen and (max-width:480px) {
+
+    .sweatwear-container .col .light-text {
+        color: #f1f1f1;
+        font-size: 110px;
+        display: flex;
+        margin-left: 50px;
+    }
+
+    .sweat-white-shoe {
+        font-size: 15px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .light-text {
+        position: relative;
+        top: 9.7rem;
+    }
+
+    .sweatwear-container .sweatewear-img-1 img {
+        position: relative;
+        height: 350px;
+        width: 350px;
+        transform: rotate(30deg);
+    }
+
+    .sweatwear-container .sweatewear-img-2 img {
+        position: relative;
+        bottom: 20%;
+        left: -65px;
+    }
+
+    .durability {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .durability .col-sm-12 {
+        font-size: 15px;
+        padding: 18px;
+    }
+
+    .sweatwear-container .row .sweatwear-year {
+        display: flex;
+        justify-self: center;
+        font-size: 140px;
+        top: 100px;
+        position: relative;
+        height: 50px;
+        transform: translate(50px, 100px);
+    }
+
+}
+
+.year-box-container {
+    visibility: hidden;
+
+}
+
+.year-box-sm {
+    visibility: visible;
+
+}
+
+.year-img-sm {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 15px;
+
+}
+
+
+/* sweatwear-content-end */
+
+/* testimonial */
+
+@media screen and (max-width:480px) {
+    .testimonial-container {
+        padding: 10px;
+    }
+
+    .testimonial-carosel .testimonial-no {
+        position: relative;
+        right: 50px;
+    }
+}
+
+/* testimonial-end */
+
+/* testimonial-sub */
+
+
+@media screen and (max-width:480px) {
+
+    .subscribe-container .d-flex {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .testimonial-container .subscribe-container .d-flex .sub {
+        margin-left: 40px;
+        padding-top: 10px;
+    }
+
+    .testimonial-container .subscribe-container {
+        color: #fff;
+        height: 81vh;
+        background-color: #4c5e5e;
+    }
+
+    .testimonial-container .subscribe-container .chat-box {
+        width: 55vw;
+        height: 46vh;
+        background-color: #fff;
+    }
+
+    .chat-text-two {
+        width: 150px;
+        height: 79px;
+        background-color: #4c5e5e;
+        position: relative;
+        color: #fff;
+    }
+
+    .chat-box .chat-box-content .input-box {
+        width: 40vw;
+    }
+
+}
+
+/* testimonial-sub-end */
+
+/* footer-container */
+
+@media screen and (max-width:480px) {
+
+    .footer-container .footer-detail {
+        display: grid;
+        grid-template-columns: auto;
+
+    }
+
+    .footer-container p {
+        width: 200px;
+    }
+
+    .footer-container .who {
+        width: 200px;
+    }
+
+    .footer-container .offset-lg-2 p {
+        width: 300px;
+    }
+
+    .footer-container .row {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+}

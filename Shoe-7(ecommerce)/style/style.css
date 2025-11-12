@@ -1,0 +1,726 @@
+html,body {
+    overflow-x: hidden;
+}
+
+/* hero-container-start */
+
+.loader {
+    -webkit-perspective: 700px;
+    perspective: 700px;
+}
+
+.loader>span {
+
+    display: inline-block;
+    animation: flip 2.6s infinite linear;
+    transform-origin: 0 70%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    color: #000;
+}
+
+@keyframes flip {
+    35% {
+        transform: rotateX(360deg);
+    }
+
+    100% {
+        transform: rotatex(360deg);
+    }
+}
+
+.loader>span:nth-child(even) {
+    color: #000;
+
+}
+
+.loader>span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loader>span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.loader>span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.loader>span:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+.loader>span:nth-child(6) {
+    animation-delay: 1.5s
+}
+
+.loader>span:nth-child(7) {
+    animation-delay: 1.8s
+}
+
+.loop-wrapper {
+    margin: 0 auto;
+    position: relative;
+    left: 10px;
+    display: block;
+    width: 150px;
+    height: 102px;
+    overflow: hidden;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+}
+
+.mountain {
+    position: absolute;
+    right: -900px;
+    bottom: -20px;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+        0 0 0 50px #4DB6AC,
+        60px 50px 0 70px #4DB6AC,
+        90px 90px 0 50px #4DB6AC,
+        250px 250px 0 50px #4DB6AC,
+        290px 320px 0 50px #4DB6AC,
+        320px 400px 0 50px #4DB6AC;
+    transform: rotate(130deg);
+    animation: mtn 20s linear infinite;
+}
+
+.hill {
+    position: absolute;
+    right: -900px;
+    bottom: -50px;
+    width: 400px;
+    border-radius: 50%;
+    height: 20px;
+    box-shadow:
+        0 0 0 50px #4DB6AC,
+        -20px 0 0 20px #4DB6AC,
+        -90px 0 0 50px #4DB6AC,
+        250px 0 0 50px #4DB6AC,
+        290px 0 0 50px #4DB6AC,
+        620px 0 0 50px #4DB6AC;
+    animation: hill 4s 2s linear infinite;
+}
+
+.tree,
+.tree:nth-child(2),
+.tree:nth-child(3) {
+    position: absolute;
+    height: 100px;
+    width: 35px;
+    bottom: 0;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/tree.svg) no-repeat;
+}
+
+.rock {
+    margin-top: -17%;
+    height: 2%;
+    width: 2%;
+    bottom: -2px;
+    border-radius: 20px;
+    position: absolute;
+    background: #ddd;
+}
+
+.truck,
+.wheels {
+    transition: all ease;
+    width: 85px;
+    margin-right: -60px;
+    bottom: 0px;
+    right: 50%;
+    position: absolute;
+    background: #eee;
+}
+
+.truck {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg) no-repeat;
+    background-size: contain;
+    height: 60px;
+}
+
+.truck:before {
+    content: " ";
+    position: absolute;
+    width: 25px;
+    box-shadow:
+        -30px 28px 0 1.5px #fff,
+        -35px 18px 0 1.5px #fff;
+}
+
+.wheels {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/wheels.svg) no-repeat;
+    height: 15px;
+    margin-bottom: 0;
+}
+
+​ .tree {
+    animation: tree 3s 0.000s linear infinite;
+}
+
+.tree:nth-child(2) {
+    animation: tree2 2s 0.150s linear infinite;
+}
+
+.tree:nth-child(3) {
+    animation: tree3 8s 0.050s linear infinite;
+}
+
+.rock {
+    animation: rock 4s -0.530s linear infinite;
+}
+
+.truck {
+    animation: truck 4s 0.080s ease infinite;
+}
+
+.wheels {
+    animation: truck 4s 0.001s ease infinite;
+}
+
+.truck:before {
+    animation: wind 1.5s 0.000s ease infinite;
+}
+
+@keyframes tree {
+    0% {
+        transform: translate(1350px);
+    }
+
+    50% {}
+
+    100% {
+        transform: translate(-50px);
+    }
+}
+
+@keyframes tree2 {
+    0% {
+        transform: translate(650px);
+    }
+
+    50% {}
+
+    100% {
+        transform: translate(-50px);
+    }
+}
+
+@keyframes tree3 {
+    0% {
+        transform: translate(2750px);
+    }
+
+    50% {}
+
+    100% {
+        transform: translate(-50px);
+    }
+}
+
+@keyframes rock {
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 2000px;
+    }
+}
+
+@keyframes truck {
+    0% {}
+
+    6% {
+        transform: translateY(0px);
+    }
+
+    7% {
+        transform: translateY(-6px);
+    }
+
+    9% {
+        transform: translateY(0px);
+    }
+
+    10% {
+        transform: translateY(-1px);
+    }
+
+    11% {
+        transform: translateY(0px);
+    }
+
+    100% {}
+}
+
+@keyframes wind {
+    0% {}
+
+    50% {
+        transform: translateY(3px)
+    }
+
+    100% {}
+}
+
+@keyframes mtn {
+    100% {
+        transform: translateX(-2000px) rotate(130deg);
+    }
+}
+
+@keyframes hill {
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+
+​ .nav-logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.nav .nav-item a:hover {
+    text-decoration: overline;
+}
+
+.hero-container .row .indro-btn .dropup .btn {
+    width: 100px;
+
+}
+
+.hero-container .row .mt-4 .buy-btn .btn {
+    width: 170px;
+}
+
+.hero-img img {
+    position: relative;
+    bottom: 45px;
+    left: 50px;
+}
+
+.vertical-text {
+    position: relative;
+    border-radius: 3px;
+    writing-mode: vertical-rl;
+    text-orientation: upleft;
+    transform: rotate(180deg);
+    font-weight: 500;
+}
+
+.than-symbol {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    left: 400px;
+    top: 25px;
+}
+
+.less {
+    border-top-left-radius: 10px;
+}
+
+
+/* hero-container-end */
+
+
+/* artical-section */
+
+
+.artical-container .artical-img-1 {
+    /* background-image: url("/img/-original-imahgcthcjy9pyhn-removebg-preview.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background-color: #fff;
+    content: "";
+    z-index: 100;
+    opacity: .9;
+}
+
+.artical-img-2 {
+    /* background-image: url("/img/Untitled_design1-removebg-preview.png");
+    background-size: cover;
+    background-position: center; */
+    background-color: #011936;
+    content: "";
+    z-index: 100;
+    opacity: .9;
+    justify-content: center;
+}
+
+.artical-img-1 .d-flex {
+    justify-content: center;
+    position: relative;
+    top: 550px;
+    color: #4575b0;
+}
+
+.artical-img-p {
+    color: #4575b0;
+    width: 450px;
+    display: flex;
+    justify-self: center;
+    position: relative;
+}
+
+.artical-img-2 .d-flex {
+    justify-content: center;
+    position: relative;
+    top: 550px;
+    color: #4575b0;
+}
+
+.artical-img-p-1 {
+    color: #4575b0;
+    width: 450px;
+    display: flex;
+    justify-self: center;
+    position: relative;
+    bottom: 38px;
+}
+
+
+/* artical-section */
+
+
+/* our-products */
+
+.our-products-container .d-wrap {
+    width: 600px;
+    display: flex;
+    justify-self: center;
+}
+
+.product-vertical-text {
+    height: 170px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.product-box {
+    display: flex;
+    justify-self: center;
+}
+
+.product-vertical-text-1 {
+    background-color: #113664;
+    color: #fff;
+    height: 170px;
+    width: 90px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.product-text {
+    position: relative;
+    top: 42px;
+}
+
+.our-products-container .products-img-container {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 305px);
+    justify-content: space-around;
+}
+
+/* our-products-ens */
+
+
+/* sweatewear-section */
+
+.img-box {
+    width: 300px;
+    overflow: hidden;
+}
+
+.img-slide-rtl {
+    width: 100%;
+    transform: translateX(100%);
+    /* start on the right */
+    animation: slideRTL 1.6s ease-out forwards;
+}
+
+@keyframes slideRTL {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-right {
+    /* starting off-screen to the left */
+    transform: translateX(-100%);
+    animation: slideInRight 2s ease-out forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .slide-right {
+        animation: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.sweatwear-container .col .light-text {
+    color: #f1f1f1;
+    font-size: 240px;
+    display: flex;
+    margin-left: 90px;
+}
+
+.sweat-white-shoe {
+    position: relative;
+}
+
+.bg-shoe-text {
+    position: absolute;
+}
+
+.sweatwear-container .sweatewear-img-1 img {
+    position: relative;
+    bottom: 10%;
+    width: 40vw;
+}
+
+.sweatwear-container .sweatewear-img-2 img {
+    position: relative;
+    bottom: 20%;
+    left: 50px;
+}
+
+.sweatwear-container p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.sweatwear-container .row .sweatwear-year {
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    font-size: 300px;
+    letter-spacing: 1rem;
+    position: relative;
+    bottom: 30%;
+}
+
+.year-box .limit2 {
+    right: 20px;
+}
+
+.sweatwear-container .fall-edition {
+    position: relative;
+    border-radius: 3px;
+    writing-mode: vertical-rl;
+    text-orientation: upleft;
+    transform: rotate(180deg);
+    font-weight: 500;
+}
+
+.sweatwear-container .year-box .d-flex .limit {
+    position: relative;
+    bottom: 28px;
+
+}
+
+.sweatwear-container .year-box .fall {
+    position: relative;
+    background-color: #7b9592;
+    color: #fff;
+
+}
+
+.sweatwear-container .year-box p {
+    height: 290px;
+    position: relative;
+    top: 15px;
+}
+
+.sweatwear-container .year-box .box-img img {
+    height: 390px;
+    width: 500px;
+    position: relative;
+    left: 500px;
+    top: 10px;
+
+}
+
+.year-box-sm {
+    visibility: hidden;
+}
+
+.fall-winter-sm {
+    background-color: #7b9592;
+    color: #ffffff;
+}
+
+.year-img-sm {
+
+    background-color: #4c5e5e;
+
+
+}
+
+/* sweatewear-section */
+
+/* testimonial-section */
+
+.testimonial-container .feed .feed-content {
+    font-family: sans-serif;
+}
+
+.testimonial-container .feed .feed-content:hover {
+    position: relative;
+    bottom: 10px;
+    box-shadow: 4px 4px 4px 4px rgb(232, 226, 226);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.testimonial-container .testimonial-no .no-two {
+    width: 45px;
+    height: 45px;
+    border: #000 solid;
+    border-radius: 50%;
+    position: relative;
+    bottom: 10px;
+}
+
+.testimonial-container .feed .feed-content img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.testimonial-container .subscribe-container {
+    color: #fff;
+    height: 60vh;
+    width: 80vw;
+    background-color: #4c5e5e;
+}
+
+.testimonial-container .subscribe-container input {
+    width: 255px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.testimonial-container .subscribe-container .d-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.testimonial-container .subscribe-container .chat-box {
+    width: 20vw;
+    height: 55vh;
+    background-color: #fff;
+}
+
+.testimonial-container .subscribe-container .chat-box .chat-box-content img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-text {
+    font-weight: 500;
+}
+
+.chat-text-box {
+    width: 88px;
+    height: 40px;
+    background-color: beige;
+    position: relative;
+    left: 35px;
+}
+
+.testimonial-container .subscribe-container .chat-box .chat-text-box-two img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-self: end;
+}
+
+.chat-text-two {
+    width: 190px;
+    height: 79px;
+    background-color: #4c5e5e;
+    position: relative;
+    left: 10px;
+    color: #fff;
+}
+
+.chat-text-box-two {
+    position: relative;
+    top: 30px;
+}
+
+.chat-box-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box .chat-btn .input-box {
+    width: 15vw;
+}
+
+.chat-btn i {
+    position: relative;
+    right: 7px;
+    bottom: 2px;
+}
+
+/* testimonial-section-end */
+
+/* footer-strat */
+
+.footer-container {
+    height: max-content;
+    width: 100vw;
+    background-color: #ffffff;
+
+}
+
+.footer-container .footer-content {
+    width: 100px;
+    color: gray;
+}
+
+.footer-container .footer-content-f-s {
+    width: 50px;
+    color: gray;
+}
+
+/* footer-end */

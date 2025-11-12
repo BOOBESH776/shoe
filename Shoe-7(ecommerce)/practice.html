@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  height: 200vh;
+  margin: 0;
+  background: #eaeaea;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Parallax section */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.parallax-box {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image animation start */
+.parallax-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(100%) translateY(0);
+  animation: slideRTL 1.4s ease-out forwards;
+  animation-timeline: scroll();
+  animation-range: entry 80% cover 30%;
+}
+
+/* Parallax effect */
+.parallax-img {
+  --parallax-speed: 0.2;
+  translate: 0 calc(var(--parallax-speed) * -50px);
+}
+
+/* Keyframes */
+@keyframes slideRTL {
+  0%   { transform: translateX(100%) translateY(30px); opacity: 0; }
+  100% { transform: translateX(0) translateY(0); opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="section"><h2>Scroll Down 👇</h2></div>
+
+<div class="section">
+  <div class="parallax-box">
+    <img src="img/hero-img.png" class="parallax-img">
+  </div>
+</div>
+
+</body>
+</html>
